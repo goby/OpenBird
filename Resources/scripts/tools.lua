@@ -187,6 +187,12 @@ function onCommonMenuLayerTouchBegan(touch, event)
     return true
 end
 
+-- log to server
+function logToServer()
+    require "login.login"
+    login.login()
+end
+
 function onCommonMenuLayerTouchEnded(touch, event)
     local location = touch:getLocation()
     cclog("onCommonMenuLayerTouchEnded: %0.2f, %0.2f", location.x, location.y)
@@ -199,15 +205,14 @@ function onCommonMenuLayerTouchEnded(touch, event)
         elseif clickedButton == g_playButton then
             local gameScene = nil 
             if g_initFlag == nil then
-                gameScene = require("scripts.GameScene")
-            else
+                require("scripts.GameScene")
                 gameScene = createGameScene()
             end
             local trans = cc.TransitionFade:create(0.5, gameScene, cc.c3b(0,0,0))
             cc.Director:getInstance():replaceScene(trans)
             cc.SimpleAudioEngine:getInstance():playEffect(uiPath)
         elseif clickedButton == g_rankButton then
-            showAds()
+            logToServer()
         end
 
         clickedButton = nil

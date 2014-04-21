@@ -24,7 +24,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcocos2d", "..\cocos2d\co
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libAudio", "..\cocos2d\cocos\audio\proj.win32\CocosDenshion.vcxproj", "{F8EDD7FA-9A51-4E80-BAEB-860825D2EAC6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "liblua", "..\cocos2d\cocos\scripting\lua\bindings\liblua.vcxproj", "{DDC3E27F-004D-4DD4-9DD3-931A013D2159}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "liblua", "..\cocos2d\cocos\scripting\lua-bindings\proj.win32\liblua.vcxproj", "{DDC3E27F-004D-4DD4-9DD3-931A013D2159}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libNetwork", "..\cocos2d\cocos\network\proj.win32\libNetwork.vcxproj", "{DF2638C0-8128-4847-867C-6EAFE3DEE7B5}"
 EndProject
@@ -32,9 +32,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libCocosBuilder", "..\cocos
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libCocosStudio", "..\cocos2d\cocos\editor-support\cocostudio\proj.win32\libCocosStudio.vcxproj", "{B57CF53F-2E49-4031-9822-047CC0E6BDE2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libGUI", "..\cocos2d\cocos\gui\proj.win32\libGUI.vcxproj", "{7E06E92C-537A-442B-9E4A-4761C84F8A1A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libGUI", "..\cocos2d\cocos\ui\proj.win32\libGUI.vcxproj", "{7E06E92C-537A-442B-9E4A-4761C84F8A1A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libSpine", "..\cocos2d\cocos\editor-support\spine\proj.win32\libSpine.vcxproj", "{B7C2A162-DEC9-4418-972E-240AB3CBFCAE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpomelo", "libpomelo.vcxproj", "{625FF492-B59F-569D-16CD-9D8893159070}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libuv", "libuv.vcxproj", "{603C6853-166F-A229-0CE7-B001CAF96C76}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jansson", "jansson.vcxproj", "{D6F69B1D-C352-4321-DB83-D64F1E7E60C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +92,18 @@ Global
 		{B7C2A162-DEC9-4418-972E-240AB3CBFCAE}.Debug|Win32.Build.0 = Debug|Win32
 		{B7C2A162-DEC9-4418-972E-240AB3CBFCAE}.Release|Win32.ActiveCfg = Release|Win32
 		{B7C2A162-DEC9-4418-972E-240AB3CBFCAE}.Release|Win32.Build.0 = Release|Win32
+		{625FF492-B59F-569D-16CD-9D8893159070}.Debug|Win32.ActiveCfg = Debug|Win32
+		{625FF492-B59F-569D-16CD-9D8893159070}.Debug|Win32.Build.0 = Debug|Win32
+		{625FF492-B59F-569D-16CD-9D8893159070}.Release|Win32.ActiveCfg = Debug|Win32
+		{625FF492-B59F-569D-16CD-9D8893159070}.Release|Win32.Build.0 = Debug|Win32
+		{603C6853-166F-A229-0CE7-B001CAF96C76}.Debug|Win32.ActiveCfg = Debug|Win32
+		{603C6853-166F-A229-0CE7-B001CAF96C76}.Debug|Win32.Build.0 = Debug|Win32
+		{603C6853-166F-A229-0CE7-B001CAF96C76}.Release|Win32.ActiveCfg = Debug|Win32
+		{603C6853-166F-A229-0CE7-B001CAF96C76}.Release|Win32.Build.0 = Debug|Win32
+		{D6F69B1D-C352-4321-DB83-D64F1E7E60C4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D6F69B1D-C352-4321-DB83-D64F1E7E60C4}.Debug|Win32.Build.0 = Debug|Win32
+		{D6F69B1D-C352-4321-DB83-D64F1E7E60C4}.Release|Win32.ActiveCfg = Debug|Win32
+		{D6F69B1D-C352-4321-DB83-D64F1E7E60C4}.Release|Win32.Build.0 = Debug|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

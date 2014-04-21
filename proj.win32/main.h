@@ -7,4 +7,7 @@
 #include <windows.h>
 #include <tchar.h>
 
+#pragma comment(lib, "IPHLPAPI.lib")
+#pragma comment(lib, "Psapi.lib")
+
 #endif    // __WINMAIN_H__

@@ -2,6 +2,7 @@
 -- Author: GeZiyang
 -- Date: 2014-02-10
 --
+require "scripts.net"
 
 local midX = visibleSize.width / 2
 local midY = visibleSize.height / 2
@@ -42,6 +43,19 @@ local birdRotateFunc = 0
 
 local gameLayerListener = nil
 local overLayerListener = nil
+
+local function syncLoction(x, y)
+    local msg = { uid = 111, pos = x, score = y}
+    local route = "chat.chatHandler.sync"
+    net.notify(route, msg)
+end
+
+local function onSync(msg)
+    cclog("---onSync")
+    cclog("  user    :"..msg["user"])
+    cclog("  position:"..msg["position"])
+    cclog("  score   :"..msg["score"])
+end
 
 -- functions
 local function showGameOverLayer()
@@ -421,6 +435,8 @@ local function createLayerBg()
         	checkFunc = cc.Director:getInstance():getScheduler():scheduleScriptFunc(checkHit, 0, false)
             birdRotateFunc = cc.Director:getInstance():getScheduler():scheduleScriptFunc(rotateBird, 0, false)
         else
+
+            syncLoction(tchpos, totalScore)
             -- spriteBird:setPosition(cc.p(birdX, spriteBird:getPositionY() + 10))
             spriteBird:getPhysicsBody():setVelocity(cc.p(0, tapV))
             -- spriteBird:getPhysicsBody():applyImpulse(cc.p(0, 20000))
@@ -463,6 +479,9 @@ local function resetGameSceneValue()
     totalScore = 0
     gameOver = false
 
+    net.removeListener("onSync")
+    net.addListener("onSync", onSync)
+
     if birdRotateFunc ~= 0 then
         cc.Director:getInstance():getScheduler():unscheduleScriptEntry(birdRotateFunc)
         birdRotateFunc = 0
@@ -487,4 +506,8 @@ function createGameScene()
     return scene
 end
 
-return createGameScene()
+function runScene(data)
+    local gameScene = createGameScene()
+    local trans = cc.TransitionFade:create(0.5, gameScene, cc.c3b(0,0,0))
+    cc.Director:getInstance():replaceScene(trans)
+end

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jansson.gyp" />
+    <ClCompile Include="..\pomelo\deps\jansson\src\dump.c" />
+    <ClCompile Include="..\pomelo\deps\jansson\src\error.c" />
+    <ClCompile Include="..\pomelo\deps\jansson\src\hashtable.c" />
+    <ClCompile Include="..\pomelo\deps\jansson\src\load.c" />
+    <ClCompile Include="..\pomelo\deps\jansson\src\memory.c" />
+    <ClCompile Include="..\pomelo\deps\jansson\src\pack_unpack.c" />
+    <ClCompile Include="..\pomelo\deps\jansson\src\strbuffer.c" />
+    <ClCompile Include="..\pomelo\deps\jansson\src\strconv.c" />
+    <ClCompile Include="..\pomelo\deps\jansson\src\utf.c" />
+    <ClCompile Include="..\pomelo\deps\jansson\src\value.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\pomelo\deps\jansson\src\hashtable.h" />
+    <ClInclude Include="..\pomelo\deps\jansson\src\jansson_private.h" />
+    <ClInclude Include="..\pomelo\deps\jansson\src\strbuffer.h" />
+    <ClInclude Include="..\pomelo\deps\jansson\src\utf.h" />
+    <ClInclude Include="..\pomelo\deps\jansson\src\jansson.h" />
+    <ClInclude Include="..\pomelo\deps\jansson\src\jansson_config.h" />
+  </ItemGroup>
+</Project>

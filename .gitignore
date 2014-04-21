@@ -1,4 +1,5 @@
 proj.win32/Debug.win32/
+proj.win32/Debug/
 proj.win32/FlappyBird.opensdf
 proj.win32/FlappyBird.sdf
 proj.android/assets/
@@ -9,3 +10,7 @@ proj.android/libs/
 proj.android/.settings/
 proj.android/google-play-services_lib/bin/
 proj.android/google-play-services_lib/gen/
+*.suo
+*.vcxproj.user
+*.tlog
+*.obj

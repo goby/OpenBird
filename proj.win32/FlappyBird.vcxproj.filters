@@ -30,6 +30,12 @@
     <ClInclude Include="..\Classes\LuaInterface\luaconf.h">
       <Filter>Classes\LuaInterface</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\Net.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ThreadSafeQueue.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
@@ -43,6 +49,12 @@
     </ClCompile>
     <ClCompile Include="..\Classes\LuaInterface\lua_tinker.cpp">
       <Filter>Classes\LuaInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Net.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\NetToLua.cpp">
+      <Filter>Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

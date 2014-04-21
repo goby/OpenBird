@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{603C6853-166F-A229-0CE7-B001CAF96C76}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libuv</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\.\bin\;$(MSBuildProjectDirectory)\.\bin\</ExecutablePath>
+    <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration).$(Platform)\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)lib\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\pomelo\deps\uv\include;..\pomelo\deps\uv\include\uv-private;..\pomelo\deps\uv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;_WIN32_WINNT=0x0600;_GNU_SOURCE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\pomelo\deps\uv\include;..\pomelo\deps\uv\include\uv-private;..\pomelo\deps\uv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;_WIN32_WINNT=0x0600;_GNU_SOURCE;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="common.gypi" />
+    <None Include="uv.gyp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\pomelo\deps\uv\include\uv.h" />
+    <ClInclude Include="..\pomelo\deps\uv\include\uv-private\ngx-queue.h" />
+    <ClInclude Include="..\pomelo\deps\uv\include\uv-private\tree.h" />
+    <ClInclude Include="..\pomelo\deps\uv\src\uv-common.h" />
+    <ClInclude Include="..\pomelo\deps\uv\include\uv-private\uv-win.h" />
+    <ClInclude Include="..\pomelo\deps\uv\src\win\atomicops-inl.h" />
+    <ClInclude Include="..\pomelo\deps\uv\src\win\handle-inl.h" />
+    <ClInclude Include="..\pomelo\deps\uv\src\win\internal.h" />
+    <ClInclude Include="..\pomelo\deps\uv\src\win\req-inl.h" />
+    <ClInclude Include="..\pomelo\deps\uv\src\win\stream-inl.h" />
+    <ClInclude Include="..\pomelo\deps\uv\src\win\winapi.h" />
+    <ClInclude Include="..\pomelo\deps\uv\src\win\winsock.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\pomelo\deps\uv\src\fs-poll.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\inet.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\uv-common.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\async.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\core.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\dl.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\error.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\fs.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\fs-event.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\getaddrinfo.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\handle.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\loop-watcher.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\pipe.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\thread.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\poll.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\process.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\process-stdio.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\req.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\signal.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\stream.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\tcp.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\tty.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\threadpool.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\timer.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\udp.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\util.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\winapi.c" />
+    <ClCompile Include="..\pomelo\deps\uv\src\win\winsock.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
