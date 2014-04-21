@@ -1,6 +1,6 @@
 [submodule "cocos2d"]
 	path = cocos2d
-	url = https://github.com/cocos2d/cocos2d-x.git
+	url = https://github.com/cocos2d/cocos2d-x
 [submodule "pomelo"]
 	path = pomelo
 	url = https://github.com/NetEase/libpomelo.git
